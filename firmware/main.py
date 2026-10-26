@@ -47,6 +47,8 @@ def _adc_v(adc, n=8):
 
 
 def read_current_a():
+    if C.CURRENT_SENSOR == "shunt":
+        return _adc_v(adc_cur) / (C.SHUNT_OHMS * C.INA_GAIN)
     v = _adc_v(adc_cur) * C.CUR_DIVIDER
     return (v - C.CUR_ZERO_V) / C.CUR_SENS_V_PER_A
 

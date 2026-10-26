@@ -8,7 +8,7 @@ PIN_BUZZER = 13       # active piezo
 PIN_LED_R = 10
 PIN_LED_G = 11
 PIN_LED_B = 12
-ADC_CURRENT = 0       # GP26  ACS758 OUT via 10k/10k
+ADC_CURRENT = 0       # GP26  current sense (see CURRENT_SENSOR)
 ADC_VPACK = 1         # GP27  bus via 100k/5.6k
 ADC_TEMP = 2          # GP28  10k NTC to GND, 10k pull-up to 3V3
 # Head ID: a 3-pin JST-XH beside the XT90 carries ID0, ID1 and GND. Inside
@@ -22,9 +22,14 @@ HEAD_DEFAULT = "nut"
 # ---- sensing scale factors ----
 ADC_VREF = 3.3
 ADC_MAX = 65535                      # read_u16()
-CUR_DIVIDER = 2.0                    # 10k/10k
-CUR_ZERO_V = 2.5                     # ACS758 zero-current output
-CUR_SENS_V_PER_A = 0.040             # ACS758LCB-050B
+# "shunt": 2 mOhm shunt + INA180A1 (gain 20) -> 0.040 V/A, zero at 0 V, no divider
+# "hall":  ACS758LCB-050B via 10k/10k divider -> 2.5 V zero, 0.040 V/A at the sensor
+CURRENT_SENSOR = "shunt"
+SHUNT_OHMS = 0.002
+INA_GAIN = 20.0
+CUR_DIVIDER = 2.0                    # hall only: 10k/10k
+CUR_ZERO_V = 2.5                     # hall only: ACS758 zero-current output
+CUR_SENS_V_PER_A = 0.040             # hall only: ACS758LCB-050B
 VPACK_DIVIDER = (100e3 + 5.6e3) / 5.6e3
 NTC_R_PULLUP = 10000.0
 NTC_R25 = 10000.0

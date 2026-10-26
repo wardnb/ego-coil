@@ -19,7 +19,7 @@ measurements before anything runs on the battery.
 | Path | What |
 |---|---|
 | `docs/design.md` | The electrical design, with the reasoning for every choice, plus safety and bring-up order |
-| `docs/bom.md` | Parts list with ratings and why each rating matters |
+| `docs/bom.md` | Parts list — a ~$86 budget column and a name-brand reference column |
 | `docs/schematic.svg` | Schematic of the body (power stage, main switch, supervisor) and a head |
 | `tools/zvs_tank.py` | Coil / cap / frequency / current calculator — run it for every new head |
 | `firmware/` | MicroPython supervisor for a Raspberry Pi Pico |

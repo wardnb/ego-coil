@@ -69,7 +69,7 @@ def sheet_power(d, y0=0.0):
     d += elm.Line().left().tox(q3.source)
     d += elm.Dot()
     d += elm.Line().at(q3.source).down().length(1.0)
-    d += elm.RBox().down().length(1.6).label("ACS758 ±50 A", loc="left", fontsize=FS)
+    d += elm.Resistor().down().length(1.6).label("R_sh 2 mΩ 5 W\n(Kelvin → INA180)", loc="left", fontsize=FS)
     d += elm.Line().down().toy(Y(-11))
     d += (n_g_r := elm.Dot())
     d += elm.Line().left().tox(0)
@@ -118,13 +118,13 @@ def sheet_supervisor(d, y0):
     # supplies
     d += elm.Dot(open=True).label("fused bus", loc="left", fontsize=FS).at((0, Y(0)))
     d += elm.Line().right().length(1)
-    d += elm.RBox().right().length(3.2).label("R-78HB12-0.5\n17–72 V in", fontsize=FS)
+    d += elm.RBox().right().length(3.2).label("XL7015 buck\n5–80 V in → 12 V", fontsize=FS)
     d += elm.Line().right().length(1)
     d += elm.Dot().label("+12 V\ngate rail, fan, TC4420", loc="top", fontsize=FS)
     d += elm.Line().right().length(1.5)
-    d += elm.RBox().right().length(3.2).label("R-78E5.0-0.5", fontsize=FS)
+    d += elm.RBox().right().length(3.2).label("MP1584 buck\n12 → 5 V", fontsize=FS)
     d += elm.Line().right().length(1)
-    d += elm.Dot().label("+5 V\nPico VSYS, ACS758", loc="top", fontsize=FS)
+    d += elm.Dot().label("+5 V\nPico VSYS, INA180", loc="top", fontsize=FS)
 
     pins = [elm.IcPin(name="ADC0", side="left", pin="GP26"),
             elm.IcPin(name="ADC1", side="left", pin="GP27"),
@@ -151,11 +151,10 @@ def sheet_supervisor(d, y0):
         d.add(elm.Resistor().up().length(1.6).label(value, loc="right", fontsize=FS))
         d.add(elm.Vdd().label("3V3", fontsize=FS))
 
-    # ADC0 current
-    shunt_to_gnd(pico.ADC0, "10 k")
+    # ADC0 current: INA180A1 across the shunt, output straight to the ADC
     d += elm.Line().at(pico.ADC0).left().length(1)
-    d += elm.Resistor().left().length(2.5).label("10 k", fontsize=FS)
-    d += elm.Dot(open=True).label("ACS758 OUT\n2.5 V + 40 mV/A", loc="left", fontsize=FS)
+    d += elm.RBox().left().length(3.2).label("INA180A1\ngain 20", fontsize=FS)
+    d += elm.Dot(open=True).label("R_sh Kelvin\n40 mV/A → 1.6 V @ 40 A", loc="left", fontsize=FS)
     # ADC1 pack voltage
     shunt_to_gnd(pico.ADC1, "5.6 k")
     d += elm.Line().at(pico.ADC1).left().length(1)

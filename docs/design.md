@@ -19,8 +19,8 @@ short flexible lead → swappable coil head that carries its own resonant caps.
  │                        │                     │  ┌─ Hall sensor   │   │ + coil  │
  │                        └── pack negative ────┴──┘                │   └─────────┘
  │                                                                   │
- │  12 V (R-78HB12) → gate pull-ups, fan, Q3 driver                  │
- │  5 V  (R-78E5.0) → RP2040 supervisor                              │
+ │  12 V buck (XL7015, 80 V in) → gate pull-ups, fan, Q3 driver      │
+ │  5 V  mini buck → RP2040 supervisor, INA180                       │
  └───────────────────────────────────────────────────────────────────┘
 ```
 
@@ -159,19 +159,20 @@ drag the node to the bus voltage.
 
 | Signal | Sensor | To RP2040 |
 |---|---|---|
-| Bus current | ACS758LCB-050B Hall sensor in the Q3 return path (±50 A, 40 mV/A, 2.5 V zero, 5 V supply, isolated) | through 10 k / 10 k divider → ADC0. 40 A → 2.05 V. |
+| Bus current | 2 mΩ / 5 W shunt in the Q3 return path, read by an **INA180A1** (gain 20, 5 V supply) with Kelvin sense leads | ADC0. 40 A → 80 mV × 20 = 1.6 V. (Alternative: ACS758LCB-050B Hall sensor through a 10 k/10 k divider; select in `config.py`.) |
 | Pack voltage | 100 kΩ / 5.6 kΩ divider from the fused bus | ADC1. 58 V → 3.07 V. |
 | Heatsink temp | 10 kΩ NTC (B=3950) on the MOSFET heatsink, 10 kΩ to 3.3 V | ADC2. |
 | Trigger | momentary switch to GND, internal pull-up | GP16 |
 | Head ID | two lines (GP22, GP21) with internal pull-ups, strapped to GND or open inside the head | 4 codes |
 
 ### Supplies
-* **12 V**: RECOM **R-78HB12-0.5** (17–72 V in, 0.5 A). Powers the gate
-  pull-ups (~0.15 A), the TC4420, and the fan. If you pick a 0.3 A fan, use
-  the R-78HB12-0.5 *and* feed the fan from it; otherwise add a second module.
-  Do **not** use LM2596 boards: 40 V max, and a fresh pack is 58 V.
-* **5 V**: RECOM R-78E5.0-0.5 fed from the 12 V rail → RP2040 VSYS and the
-  ACS758.
+* **12 V**: an **XL7015**-based buck module (5–80 V in, ~0.8 A; sold as
+  "DC-DC 80 V step-down"). Powers the gate pull-ups (~0.15 A), the TC4420,
+  and the fan. Check the module's input cap is rated ≥ 80 V; some clones fit
+  63 V caps. Do **not** use LM2596 boards: 40 V max, and a fresh pack is 58 V.
+  (Drop-in upgrade if you want a name-brand part: RECOM R-78HB12-0.5, 72 V in.)
+* **5 V**: any small 12 V → 5 V buck (MP1584 module) or a 7805 on a tab of
+  heatsink — the Pico and the INA180 draw < 100 mA.
 * RP2040: a Pico or Pico W. Everything is 3.3 V logic from there.
 
 ### Firmware behaviour (`firmware/main.py`)
@@ -194,10 +195,14 @@ drag the node to the bus voltage.
   ~2.5 mm gap between turns (slip on PTFE or fibreglass sleeve to guarantee
   it). Two straight tails ~40 mm long that pass through the head shell to the
   cap bank.
-* **Cap bank**: 15 × 0.1 µF film caps, **≥ 630 V, dV/dt-rated for pulse /
-  resonant duty** (Cornell Dubilier 940C series, EPCOS B32652/B32654, KEMET
-  R75/R76 pulse grades). Each cap sees ~10 A RMS; generic 0.1 µF MKP coupling
-  caps are rated 1–3 A and *will* fail hot. Solder them between two copper
+* **Cap bank**: ~1.5 µF of **pulse / resonant-rated polypropylene at
+  ≥ 630 V**. Cheapest good option: 5 × 0.33 µF 1200 V CBB81 (the ones sold
+  for ZVS heaters, ~$1.50 each) or, free, the 0.27–0.3 µF 1200 V resonant caps
+  out of a scrapped induction cooktop — that is exactly this duty. The
+  reference-grade choice is 15 × 0.1 µF Cornell Dubilier 940C / EPCOS B32652.
+  The bank carries ~155 A RMS total, so ~30 A per cap with 5 caps: check the
+  datasheet's dV/dt or I_RMS figure. Generic 0.1 µF MKP coupling caps are
+  rated 1–3 A and *will* fail hot. Solder them between two copper
   bus bars (20 × 2 mm) that also clamp the coil tails.
 * **Cooling**: for 10–15 s bursts the copper mass is enough. A 1/4" tube
   coil is also a water channel: if you want continuous duty, run coolant
