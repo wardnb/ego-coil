@@ -23,7 +23,8 @@ measurements before anything runs on the battery.
 | `docs/schematic.svg` | Schematic of the body (power stage, main switch, supervisor) and a head |
 | `tools/zvs_tank.py` | Coil / cap / frequency / current calculator — run it for every new head |
 | `firmware/` | MicroPython supervisor for a Raspberry Pi Pico |
-| `cad/` | OpenSCAD: parametric body enclosure and head shell |
+| `cad/` | CadQuery: parametric body, head shell and EGO dock (STLs in `cad/out/`) |
+| `docs/dock-measurement.md` | Ten caliper readings that make the printed dock fit your pack |
 
 ## Design in one paragraph
 
@@ -51,8 +52,8 @@ Firmware: copy `firmware/*.py` to the Pico with Thonny or `mpremote cp
 firmware/*.py :`. Pin assignments and trip thresholds are in
 `firmware/config.py`.
 
-CAD: open `cad/body.scad` or `cad/head.scad` in OpenSCAD, adjust the
-parameters at the top of each file, export STL.
+CAD: `pip install cadquery && python cad/build_cad.py`; parameters are the
+dictionaries at the top of the file, STLs land in `cad/out/`.
 
 ## Safety
 

@@ -28,8 +28,30 @@ body = dict(
     boss_d=8.0,
     boss_tap_d=2.5,             # M3 self-tap in boss
 )
+# ---- EGO dock: a printed plate that the pack slides onto ---------------------
+# EVERY value marked MEASURE is a placeholder. Measure your own pack with
+# calipers per docs/dock-measurement.md and fill them in before printing.
+# Geometry convention for the dock part: pack slides on along +Y, plate lies in
+# the XY plane with the rails standing up in +Z, terminals at the +Y end.
+rail = dict(
+    plate_w=78, plate_l=64, plate_t=5,      # matches the body's recess + 64x44 screw pattern
+    rail_spacing=50.0,     # MEASURE: centre-to-centre of the pack's two grooves
+    rail_w_top=9.0,        # MEASURE: groove width at the pack's opening
+    rail_w_root=6.0,       # MEASURE: neck width (narrowest part of the groove)
+    rail_h=6.0,            # MEASURE: groove depth
+    rail_l=52,             # length of the rails along the slide direction
+    stop_h=10,             # end stop the pack butts against
+    latch_w=12.0,          # MEASURE: width of the pack's latch tongue
+    latch_depth=3.0,       # MEASURE: how far the tongue drops
+    latch_from_end=14.0,   # MEASURE: distance from the end stop to the latch face
+    term_pitch=20.0,       # MEASURE: centre spacing of the two power blades
+    term_from_end=8.0,     # MEASURE: distance from the end stop to the blade centres
+    term_w=7.0, term_t=1.2,    # MEASURE: blade width / thickness (6.3 mm spade fits most)
+    term_slot_depth=18,    # depth of the slot that holds the female spade
+    clearance=0.3,         # printed-fit allowance, added to groove-side dimensions
+)
 dock = dict(                    # pocket on the rear face for the EGO adapter plate
-    w=78, h=58, depth=1.5, screw_pitch=(64, 44), screw_d=3.2,   # depth < wall: a locating recess, plate screws through with nuts inside
+    w=78, h=64, depth=1.5, screw_pitch=(64, 44), screw_d=3.2,   # depth < wall: a locating recess, plate screws through with nuts inside
     cable_hole_d=14,            # B+/B- pass-through inside the pocket
 )
 heatsink = dict(                # bay on the left side with a fan and exhaust slots
@@ -142,6 +164,56 @@ def build_body():
     return part
 
 
+def build_dock():
+    """Printed EGO dock. Rails are T/dovetail profiles sized from `rail`."""
+    r = rail
+    c = r["clearance"]
+    plate = (cq.Workplane("XY").box(r["plate_w"], r["plate_l"], r["plate_t"])
+             .edges("|Z").fillet(4).translate((0, 0, r["plate_t"] / 2)))
+    # screw holes matching the body recess pattern + centre cable hole
+    sp = dock["screw_pitch"]
+    plate = plate.cut(cq.Workplane("XY").workplane(offset=-1)
+                      .rect(sp[0], sp[1], forConstruction=True).vertices()
+                      .circle(dock["screw_d"] / 2).extrude(r["plate_t"] + 2))
+    plate = plate.cut(cq.Workplane("XY").workplane(offset=-1).circle(dock["cable_hole_d"] / 2)
+                      .extrude(r["plate_t"] + 2))
+
+    # rails: trapezoid profile (narrow at root, wide at top) extruded along Y
+    top = r["rail_w_top"] - c
+    root = r["rail_w_root"] - c
+    h = r["rail_h"] - c
+    z0 = r["plate_t"]
+    y0 = -r["plate_l"] / 2 + 2
+    profile = [(-root / 2, 0), (root / 2, 0), (top / 2, h * 0.55), (top / 2, h), (-top / 2, h), (-top / 2, h * 0.55)]
+    for sx in (-1, 1):
+        x = sx * r["rail_spacing"] / 2
+        rl = (cq.Workplane("XZ").workplane(offset=-y0).center(x, z0)
+              .polyline(profile).close().extrude(-r["rail_l"]))
+        plate = plate.union(rl)
+
+    # end stop across the +Y end, with slots for the two spade terminals
+    stop_y = y0 + r["rail_l"] + 3
+    stop = (cq.Workplane("XY").workplane(offset=z0)
+            .center(0, stop_y).rect(r["rail_spacing"] + top + 6, 6).extrude(r["stop_h"]))
+    plate = plate.union(stop)
+    for sx in (-1, 1):
+        x = sx * r["term_pitch"] / 2
+        slot = (cq.Workplane("XY").workplane(offset=z0 + 1)
+                .center(x, stop_y - 3 - r["term_from_end"] + r["term_slot_depth"] / 2)
+                .rect(r["term_w"] + 0.6, r["term_slot_depth"]).extrude(r["stop_h"]))
+        plate = plate.cut(slot)
+        # wire channel down through the plate behind each terminal
+        plate = plate.cut(cq.Workplane("XY").workplane(offset=-1)
+                          .center(x, stop_y - 3 - r["term_from_end"]).circle(2.5).extrude(z0 + 3))
+
+    # latch catch: a ramped block the pack's tongue drops behind
+    latch_y = stop_y - 3 - r["latch_from_end"]
+    catch = (cq.Workplane("XY").workplane(offset=z0).center(0, latch_y)
+             .rect(r["latch_w"] + 2, 4).extrude(r["latch_depth"]))
+    plate = plate.union(catch)
+    return plate
+
+
 def build_body_lid():
     b = body
     L, W, wall, r, t = b["L"], b["W"], b["wall"], b["corner_r"], b["lid_t"]
@@ -217,3 +289,4 @@ if __name__ == "__main__":
     export("body_lid", build_body_lid())
     export("head", build_head())
     export("head_lid", build_head_lid())
+    export("dock", build_dock())

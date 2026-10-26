@@ -16,8 +16,7 @@ The four things that blew the first budget, and what replaced them:
 | ANL fuse + holder ($8), new heatsink + fan ($15) | MAXI blade fuse + holder; CPU cooler from a scrap PC | ~$15 |
 
 And one that isn't on the list but matters most: **print the EGO dock**
-instead of buying an adapter ($15–25). Published models exist (search
-"EGO 56V battery adapter" on Printables/Thingiverse).
+(`cad/out/dock.stl`) instead of buying an adapter ($15–25).
 
 ## Body — power stage
 
@@ -65,7 +64,7 @@ instead of buying an adapter ($15–25). Published models exist (search
 
 | Qty | Part | Budget | $ | Reference | $ |
 |---|---|---|---|---|---|
-| 1 | EGO 56 V dock | **print** a published EGO adapter model; add two M4 bolts + ring terminals for B+/B− | 2 | bought DIY adapter with screw terminals | 20 |
+| 1 | EGO 56 V dock | **print `cad/out/dock.stl`** after measuring your pack (`docs/dock-measurement.md`); 2 × 6.3 mm female spades on 10 AWG, 4 × M3 nyloc | 2 | bought DIY adapter with screw terminals | 20 |
 | 1 | EGO pack 5 Ah+ | already own | 0 | — | — |
 
 ## Head (reference 8-turn nut coil)
