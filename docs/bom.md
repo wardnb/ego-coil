@@ -64,7 +64,7 @@ And one that isn't on the list but matters most: **print the EGO dock**
 
 | Qty | Part | Budget | $ | Reference | $ |
 |---|---|---|---|---|---|
-| 1 | EGO 56 V dock | **print `cad/out/dock.stl`** after measuring your pack (`docs/dock-measurement.md`); 2 × 6.3 mm female spades on 10 AWG, 4 × M3 nyloc | 2 | bought DIY adapter with screw terminals | 20 |
+| 1 | EGO 56 V dock | **print `cad/ego56v_dock.stl`** (`docs/dock-measurement.md`); 2 × 6.3 mm male blade terminals on 10 AWG, 4 × M3×20 csk + nyloc | 2 | bought DIY adapter with screw terminals | 20 |
 | 1 | EGO pack 5 Ah+ | already own | 0 | — | — |
 
 ## Head (reference 8-turn nut coil)

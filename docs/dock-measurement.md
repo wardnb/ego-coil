@@ -1,51 +1,77 @@
-# Measuring your EGO pack for the printed dock
+# EGO dock
 
-`cad/build_cad.py` has a `rail` dictionary whose values marked **MEASURE** are
-placeholders. Ten caliper readings on the pack you own turn them into a dock
-that fits. Do this once; it takes ten minutes.
+## Use the supplied interface: `cad/ego56v_dock.stl`
 
-Orientation: look at the bottom of the pack, the face that slides onto a tool.
-The pack slides on in one direction; call that the **slide axis**. The two
-grooves that run along the slide axis are what the dock's rails engage.
+`cad/ego56v_dock.stl` is a complete EGO 56 V tool-side interface (93.5 × 93 ×
+28.5 mm): the central tower with the wire ramp inside, the two 15 mm wings
+the pack's grooves ride on, and a 5 mm tail plate with two blade slots on
+28 mm centres for the power terminals. It mounts **under the body**, so the
+pack hangs below the electronics like a cordless drill's.
+
+Frame convention: the STL loads with z up, the tower running along y
+(y −61 … +31) and the wings at ±x. The pack slides along y.
+
+### 1. Add four screw holes in the slicer
+
+The mesh is not manifold, so holes are added at slice time rather than in
+CAD. In Orca / Bambu / PrusaSlicer, add a **negative part** (cylinder, 3.4 mm
+diameter, through) at each of these positions in the STL's own coordinates,
+plus a 6.5 mm × 90° countersink on the top (wing) face so the heads sit below
+the surface the pack slides over:
+
+| x | y |
+|---|---|
+| +34 | −10 |
+| +34 | +20 |
+| −34 | −10 |
+| −34 | +20 |
+
+These land in the solid wings, 15 mm deep. `cad/build_cad.py` puts the
+matching 3.2 mm holes and M3 nut bosses in the body floor
+(`DOCK_STL_HOLES`); change both together if you move them.
+
+### 2. Terminals
+
+Two **male 6.3 mm blade terminals** (flag/PCB-tab style, 0.8 mm thick, crimped
+or soldered to 10 AWG) stand in the tail-plate slots at x = ±14 and run up
+the ramp inside the tower. The pack's female contacts pick them up as it
+slides on. Confirm the blade thickness against the slot (≈1 mm) before you
+glue anything: too thin and the blade can tilt, too thick and it won't seat.
+Use the two **power** contacts only; the pack's small signal pins are not
+connected, the pack's own BMS does the protection.
+
+Route the two 10 AWG leads through the body's floor cable hole (14 mm) to
+the fuse holder immediately inside.
+
+### 3. Print
+
+PETG or ASA, tower up, 5 walls, 40 % infill, no supports needed for the
+original geometry. Check the mesh in the slicer's repair tool first; it
+reports non-manifold edges on this file but slices cleanly.
+
+### 4. Assembly
+
+M3 × 20 countersunk from the dock side, through the body floor, nyloc nuts on
+the bosses inside. The pack's weight and every yank on the lead go through
+these four screws; don't skip the nylocs.
+
+## Fallback: parametric dock
+
+If the supplied STL turns out not to match your pack generation,
+`build_dock()` in `cad/build_cad.py` is a parametric rail-plate dock whose
+`rail` values you fill in from ten caliper readings on your pack:
 
 | # | Measure | Put in |
 |---|---|---|
-| 1 | Centre-to-centre distance between the two grooves | `rail_spacing` |
-| 2 | Groove width at the opening (where the rail enters) | `rail_w_top` |
-| 3 | Groove width at the neck, the narrowest point | `rail_w_root` |
-| 4 | Groove depth, opening to floor | `rail_h` |
-| 5 | Width of the latch tongue (the spring-loaded tab the release button moves) | `latch_w` |
-| 6 | How far the tongue drops below the groove floor when released | `latch_depth` |
-| 7 | Distance from the pack's leading face (the end that hits the tool's stop) to the latch tongue's catching face | `latch_from_end` |
-| 8 | Centre spacing of the two **power** blades (the big ones; ignore the small signal pins) | `term_pitch` |
-| 9 | Distance from the leading face to the centre of the power blades | `term_from_end` |
+| 1 | Centre-to-centre distance between the pack's two grooves | `rail_spacing` |
+| 2 | Groove width at the opening | `rail_w_top` |
+| 3 | Groove width at the neck | `rail_w_root` |
+| 4 | Groove depth | `rail_h` |
+| 5 | Latch tongue width | `latch_w` |
+| 6 | Latch tongue drop | `latch_depth` |
+| 7 | Leading face → latch catch face | `latch_from_end` |
+| 8 | Power-blade centre spacing | `term_pitch` |
+| 9 | Leading face → blade centres | `term_from_end` |
 | 10 | Blade width and thickness | `term_w`, `term_t` |
 
-Then:
-
-```bash
-python cad/build_cad.py        # writes cad/out/dock.stl
-```
-
-## First print
-
-Print `dock.stl` alone in PETG, rails up, no supports, 5 walls, 40 % infill.
-If the pack is tight, raise `clearance` by 0.1; if it rattles, lower it.
-Check that the latch clicks and holds before you trust it with 2 kW.
-
-## Terminals
-
-Female 6.3 mm spade terminals (crimped to 10 AWG, insulated) drop into the two
-slots in the end stop; the wire runs down through the hole behind each slot
-and into the body through the cable hole. Use the two **power** blades only.
-EGO packs also carry small signal contacts for the tool; this design does not
-connect to them, the pack's internal BMS does the protection.
-
-If your pack's blades are not 6.3 mm, measure (#10) and swap the terminals
-for the matching size; the slot width follows `term_w`.
-
-## Mounting
-
-The plate screws to the body's rear recess on the 64 × 44 mm pattern with four
-M3 × 12 and nuts inside the body. The pack's weight hangs on these, so use
-nyloc nuts.
+It mounts on the body's rear recess instead of underneath.

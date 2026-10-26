@@ -24,7 +24,7 @@ measurements before anything runs on the battery.
 | `tools/zvs_tank.py` | Coil / cap / frequency / current calculator — run it for every new head |
 | `firmware/` | MicroPython supervisor for a Raspberry Pi Pico |
 | `cad/` | CadQuery: parametric body, head shell and EGO dock (STLs in `cad/out/`) |
-| `docs/dock-measurement.md` | Ten caliper readings that make the printed dock fit your pack |
+| `docs/dock-measurement.md` | Fitting the EGO dock (`cad/ego56v_dock.stl`) under the body; parametric fallback |
 
 ## Design in one paragraph
 

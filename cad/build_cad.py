@@ -50,7 +50,15 @@ rail = dict(
     term_slot_depth=18,    # depth of the slot that holds the female spade
     clearance=0.3,         # printed-fit allowance, added to groove-side dimensions
 )
-dock = dict(                    # pocket on the rear face for the EGO adapter plate
+# ---- EGO dock mounted UNDER the body (pack hangs below, slide axis along X) --
+# cad/ego56v_dock.stl is the tool-side interface. Add four countersunk M3
+# holes to it in your slicer at these (x, y) positions in the STL's own
+# coordinates (origin as the file loads, z up), then it screws to the floor:
+DOCK_STL_HOLES = [(34, -10), (34, 20), (-34, -10), (-34, 20)]   # mm, STL frame
+DOCK_STL_CENTER_Y = -15.0     # STL y of the footprint centre (bounds -61..31)
+dock_under = dict(offset_x=0.0, screw_d=3.2, boss_d=8.0, boss_h=6.0)
+
+dock = dict(                    # legacy: pocket on the rear face for a flat adapter plate
     w=78, h=64, depth=1.5, screw_pitch=(64, 44), screw_d=3.2,   # depth < wall: a locating recess, plate screws through with nuts inside
     cable_hole_d=14,            # B+/B- pass-through inside the pocket
 )
@@ -154,10 +162,19 @@ def build_body():
            .rect(f["jst_w"], f["jst_h"]).extrude(wall + 2))
     part = part.cut(xt).cut(xts).cut(jst)
 
+    # --- dock under the floor: holes + nut bosses matching the STL's drilled holes
+    du = dock_under
+    pts = [(du["offset_x"] + (y - DOCK_STL_CENTER_Y), x) for x, y in DOCK_STL_HOLES]
+    part = part.union(cq.Workplane("XY").workplane(offset=wall - 0.01).pushPoints(pts)
+                      .circle(du["boss_d"] / 2).extrude(du["boss_h"]))
+    part = part.cut(cq.Workplane("XY").workplane(offset=-1).pushPoints(pts)
+                    .circle(du["screw_d"] / 2).extrude(wall + du["boss_h"] + 2))
+    part = part.cut(cq.Workplane("XY").workplane(offset=-1).circle(dock["cable_hole_d"] / 2).extrude(wall + 2))
+
     # --- standoffs on the floor: power board (rear half), Pico (front right)
     pb = powerboard
     part = standoffs(part, pb["hole_x"], pb["hole_y"], pb["standoff_h"], pb["standoff_d"], pb["tap_d"],
-                     center=(-L / 4 + 10, W / 4 - 5), z0=wall)
+                     center=(-45, 15), z0=wall)
     p = pico
     part = standoffs(part, p["hole_x"], p["hole_y"], p["standoff_h"], p["standoff_d"], p["tap_d"],
                      center=(L / 4, -W / 4 + 8), z0=wall)

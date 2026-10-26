@@ -10,15 +10,15 @@ python cad/build_cad.py
 
 | Part | What | Print notes |
 |---|---|---|
-| `body.stl` | 160 × 95 × 75 mm box. Rear: recess + 4 screws + cable hole for an EGO adapter plate. Left: 40 mm fan. Right: exhaust slots. Front: XT90 panel mount + JST-XH head-ID. Floor: standoffs for a 60 × 40 power board and a Pico. | PETG or ASA, 4 walls, 30 % infill. Open side up, no supports. |
+| `body.stl` | 160 × 95 × 75 mm box. Floor: 4 nut bosses + cable hole for the EGO dock underneath (rear recess kept for the fallback plate). Left: 40 mm fan. Right: exhaust slots. Front: XT90 panel mount + JST-XH head-ID. Floor: standoffs for a 60 × 40 power board and a Pico. | PETG or ASA, 4 walls, 30 % infill. Open side up, no supports. |
 | `body_lid.stl` | Lid with locating lip, trigger (16 mm), LED (5 mm) and buzzer grille. | Same material. |
 | `head.stl` | 70 × 48 × 34 mm shell for the cap bank. Coil tails exit the front through a thickened standoff block; lead and JST exit the back; zip-tie slots for strain relief. | **PC, PA-CF or ASA** — the coil tails get hot by conduction from the bolt. PETG is marginal. |
 | `head_lid.stl` | Plain lid. | Same material as the head. |
-| `dock.stl` | Printed EGO dock: two rails, end stop with spade-terminal slots, latch catch. **Fill in the `rail` dict from your own pack first** — see `docs/dock-measurement.md`. | PETG, rails up, 5 walls, 40 % infill. |
+| `ego56v_dock.stl` (in `cad/`, not generated) | Complete EGO tool-side interface, mounts under the body. Add four M3 holes in the slicer — see `docs/dock-measurement.md`. | PETG/ASA, tower up, 5 walls, 40 % infill. |
+| `dock.stl` | Fallback parametric rail-plate dock for the rear recess; needs ten caliper readings (`rail` dict). | PETG, rails up. |
 
 ## What is deliberately not modelled
 
-* **EGO rail dimensions.** The dock is parametric; the numbers in `rail` are placeholders until you measure your pack (`docs/dock-measurement.md`).
 
 * **The heatsink.** It sits in the rear-left bay under the fan; set
   `body["H"]` so your heatsink plus the TO-247 packages clear the lid. 75 mm
