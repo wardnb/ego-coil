@@ -1,0 +1,36 @@
+ERC WARNING: Merging two named nets (GND and KELVIN_LO) into GND.
+ERC WARNING: Merging two named nets (SHUNT_HI and KELVIN_HI) into SHUNT_HI.
+ERC WARNING: No pins attached to net LED_G.
+ERC WARNING: No drivers for net LED_G.
+ERC WARNING: No pins attached to net LED_R.
+ERC WARNING: No drivers for net LED_R.
+ERC WARNING: No pins attached to net LED_B.
+ERC WARNING: No drivers for net LED_B.
+ERC WARNING: Insufficient drive current on net +5V for pin POWER-IN pin 5/V+ of INA180A2/U2.
+ERC WARNING: Insufficient drive current on net GND for pin POWER-IN pin 5/GND2 of TC4420CPA/U1.
+ERC WARNING: Insufficient drive current on net GND for pin POWER-IN pin 2/GND of INA180A2/U2.
+ERC WARNING: Insufficient drive current on net GND for pin POWER-IN pin 4/GND of TC4420CPA/U1.
+ERC WARNING: Insufficient drive current on net +12V for pin POWER-IN pin 8/VDD of TC4420CPA/U1.
+ERC WARNING: Unconnected pin: PASSIVE pin 1/NC of TC4420CPA/U1.
+ERC WARNING: Unconnected pin: PASSIVE pin 3/NC2 of TC4420CPA/U1.
+ERC WARNING: Unconnected pin: PASSIVE pin 1/1 of HDR20/A1.
+ERC WARNING: Unconnected pin: PASSIVE pin 2/2 of HDR20/A1.
+ERC WARNING: Unconnected pin: PASSIVE pin 4/4 of HDR20/A1.
+ERC WARNING: Unconnected pin: PASSIVE pin 5/5 of HDR20/A1.
+ERC WARNING: Unconnected pin: PASSIVE pin 6/6 of HDR20/A1.
+ERC WARNING: Unconnected pin: PASSIVE pin 7/7 of HDR20/A1.
+ERC WARNING: Unconnected pin: PASSIVE pin 9/9 of HDR20/A1.
+ERC WARNING: Unconnected pin: PASSIVE pin 10/10 of HDR20/A1.
+ERC WARNING: Unconnected pin: PASSIVE pin 11/11 of HDR20/A1.
+ERC WARNING: Unconnected pin: PASSIVE pin 12/12 of HDR20/A1.
+ERC WARNING: Unconnected pin: PASSIVE pin 2/2 of HDR20/A2.
+ERC WARNING: Unconnected pin: PASSIVE pin 4/4 of HDR20/A2.
+ERC WARNING: Unconnected pin: PASSIVE pin 5/5 of HDR20/A2.
+ERC WARNING: Unconnected pin: PASSIVE pin 6/6 of HDR20/A2.
+ERC WARNING: Unconnected pin: PASSIVE pin 10/10 of HDR20/A2.
+ERC WARNING: Unconnected pin: PASSIVE pin 15/15 of HDR20/A2.
+ERC WARNING: Unconnected pin: PASSIVE pin 17/17 of HDR20/A2.
+ERC WARNING: Unconnected pin: PASSIVE pin 20/20 of HDR20/A2.
+ERC INFO: 33 warnings found while running ERC.
+ERC INFO: 0 errors found while running ERC.
+

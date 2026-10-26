@@ -10,7 +10,7 @@ python cad/build_cad.py
 
 | Part | What | Print notes |
 |---|---|---|
-| `body.stl` | 160 × 95 × 75 mm box. Floor: 4 nut bosses + cable hole for the EGO dock underneath (rear recess kept for the fallback plate). Left: 40 mm fan. Right: exhaust slots. Front: XT90 panel mount + JST-XH head-ID. Floor: standoffs for a 60 × 40 power board and a Pico. | PETG or ASA, 4 walls, 30 % infill. Open side up, no supports. |
+| `body.stl` | 160 × 95 × 75 mm box. Floor: 4 nut bosses + cable hole for the EGO dock underneath (rear recess kept for the fallback plate). Four 10 mm standoffs for the 100 × 80 main PCB (`powerboard` dict); the Pico is socketed on that board. Left: 40 mm fan. Right: exhaust slots. Front: XT90 panel mount + JST-XH head-ID. Floor: standoffs for a 60 × 40 power board and a Pico. | PETG or ASA, 4 walls, 30 % infill. Open side up, no supports. |
 | `body_lid.stl` | Lid with locating lip, trigger (16 mm), LED (5 mm) and buzzer grille. | Same material. |
 | `head.stl` | 70 × 48 × 34 mm shell for the cap bank. Coil tails exit the front through a thickened standoff block; lead and JST exit the back; zip-tie slots for strain relief. | **PC, PA-CF or ASA** — the coil tails get hot by conduction from the bolt. PETG is marginal. |
 | `head_lid.stl` | Plain lid. | Same material as the head. |

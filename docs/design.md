@@ -159,7 +159,7 @@ drag the node to the bus voltage.
 
 | Signal | Sensor | To RP2040 |
 |---|---|---|
-| Bus current | 2 mΩ / 5 W shunt in the Q3 return path, read by an **INA180A1** (gain 20, 5 V supply) with Kelvin sense leads | ADC0. 40 A → 80 mV × 20 = 1.6 V. (Alternative: ACS758LCB-050B Hall sensor through a 10 k/10 k divider; select in `config.py`.) |
+| Bus current | 2 × 2 mΩ 2512 shunts in parallel (1 mΩ, 6 W) in the Q3 return path, read by an **INA180A2** (gain 50, 5 V supply) with Kelvin traces | ADC0. 40 A → 40 mV × 50 = 2.0 V. (Alternative: ACS758LCB-050B Hall sensor through a 10 k/10 k divider; select in `config.py`.) |
 | Pack voltage | 100 kΩ / 5.6 kΩ divider from the fused bus | ADC1. 58 V → 3.07 V. |
 | Heatsink temp | 10 kΩ NTC (B=3950) on the MOSFET heatsink, 10 kΩ to 3.3 V | ADC2. |
 | Trigger | momentary switch to GND, internal pull-up | GP16 |

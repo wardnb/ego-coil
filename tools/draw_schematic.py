@@ -69,7 +69,7 @@ def sheet_power(d, y0=0.0):
     d += elm.Line().left().tox(q3.source)
     d += elm.Dot()
     d += elm.Line().at(q3.source).down().length(1.0)
-    d += elm.Resistor().down().length(1.6).label("R_sh 2 mΩ 5 W\n(Kelvin → INA180)", loc="left", fontsize=FS)
+    d += elm.Resistor().down().length(1.6).label("R_sh 2×2 mΩ (1 mΩ)\n(Kelvin → INA180)", loc="left", fontsize=FS)
     d += elm.Line().down().toy(Y(-11))
     d += (n_g_r := elm.Dot())
     d += elm.Line().left().tox(0)
@@ -153,8 +153,8 @@ def sheet_supervisor(d, y0):
 
     # ADC0 current: INA180A1 across the shunt, output straight to the ADC
     d += elm.Line().at(pico.ADC0).left().length(1)
-    d += elm.RBox().left().length(3.2).label("INA180A1\ngain 20", fontsize=FS)
-    d += elm.Dot(open=True).label("R_sh Kelvin\n40 mV/A → 1.6 V @ 40 A", loc="left", fontsize=FS)
+    d += elm.RBox().left().length(3.2).label("INA180A2\ngain 50", fontsize=FS)
+    d += elm.Dot(open=True).label("R_sh Kelvin\n50 mV/A → 2.0 V @ 40 A", loc="left", fontsize=FS)
     # ADC1 pack voltage
     shunt_to_gnd(pico.ADC1, "5.6 k")
     d += elm.Line().at(pico.ADC1).left().length(1)

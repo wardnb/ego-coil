@@ -12,7 +12,7 @@ The four things that blew the first budget, and what replaced them:
 |---|---|---|
 | 15 × CDE 940C resonant caps ($25) | 5 × 0.33 µF 1200 V CBB81 pulse caps, or free ones from a scrapped induction cooktop | ~$17 |
 | RECOM R-78HB12 + R-78E5.0 ($17) | XL7015 80 V buck module + MP1584 mini buck | ~$13 |
-| ACS758 Hall sensor ($8) | 2 mΩ shunt + INA180A1 | ~$5 |
+| ACS758 Hall sensor ($8) | 1 mΩ shunt + INA180A2 on the PCB | ~$6 |
 | ANL fuse + holder ($8), new heatsink + fan ($15) | MAXI blade fuse + holder; CPU cooler from a scrap PC | ~$15 |
 
 And one that isn't on the list but matters most: **print the EGO dock**
@@ -37,7 +37,7 @@ And one that isn't on the list but matters most: **print the EGO dock**
 | 1 | Fan 12 V 40–60 mm | from the CPU cooler | 0 | — | 5 |
 | 1 | XT90 panel-mount female | AE pair | 2 | — | 3 |
 | 1 m | 10 AWG silicone wire, red/black | — | 4 | — | 5 |
-| 1 | Proto board + copper strip for the heavy nets | — | 2 | — | 3 |
+| 1 | Main PCB (`pcb/`), JLCPCB 2 oz, 5 pcs + SMT assembly of the small parts | — | 12 | — | 12 |
 
 ## Body — main switch and supervisor
 
@@ -47,8 +47,8 @@ And one that isn't on the list but matters most: **print the EGO dock**
 | 1 | Gate driver TC4420CPA | Mouser | 1.5 | same | 1.5 |
 | 1 | Q3 gate 10 Ω, pull-down 10 kΩ | — | — | — | — |
 | 1 | Pre-charge 100 Ω 5 W across Q3 | — | 1 | — | 1 |
-| 1 | Current shunt 2 mΩ 5 W | metal-strip, Kelvin leads | 1 | — | 1 |
-| 1 | INA180A1 (gain 20) on a breakout | SOT-23 + adapter, or AE module | 1.5 | — | 1.5 |
+| 2 | Current shunt 2 mΩ 3 W, 2512 | on the PCB, JLC-placed | 1 | — | 1 |
+| 1 | INA180A2 (gain 50) SOT-23-5 | on the PCB, JLC-placed | 1 | — | 1 |
 | — | *(alternative)* ACS758LCB-050B Hall + 10 k/10 k | — | — | — | 8 |
 | 2 | Pack-voltage divider 100 k / 5.6 k 1 % | — | — | — | — |
 | 1 | NTC 10 k B3950, ring-lug | — | 1 | — | 2 |

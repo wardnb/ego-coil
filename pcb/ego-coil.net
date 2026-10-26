@@ -1,0 +1,2485 @@
+(export 
+  (version "D")
+  (design
+    (source "netlist.py")
+    (date "10/25/2026 10:40 PM")
+    (tool "SKiDL (3.0.0)")
+    (sheet
+      (number 1)
+      (name "/")
+      (tstamps "/")
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source "../netlist.py")
+        (comment
+          (number "1")
+          (value ""))
+        (comment
+          (number "2")
+          (value ""))
+        (comment
+          (number "3")
+          (value ""))
+        (comment
+          (number "4")
+          (value ""))
+        (comment
+          (number "5")
+          (value ""))
+        (comment
+          (number "6")
+          (value ""))
+        (comment
+          (number "7")
+          (value ""))
+        (comment
+          (number "8")
+          (value ""))
+        (comment
+          (number "9")
+          (value "")))))
+  (components
+    (comp
+      (ref "A1")
+      (value "HDR20")
+      (description "")
+      (footprint "Connector_PinSocket_2.54mm:PinSocket_1x20_P2.54mm_Vertical")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Pico socket, pins 1–20")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Connector_PinSocket_2.54mm:PinSocket_1x20_P2.54mm_Vertical")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "NMsxoBpDX2")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "HDR20"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "cee23855-09b5-52a5-a5d6-129a5e3f9a16"))
+    (comp
+      (ref "A2")
+      (value "HDR20")
+      (description "")
+      (footprint "Connector_PinSocket_2.54mm:PinSocket_1x20_P2.54mm_Vertical")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Pico socket, pins 21–40")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Connector_PinSocket_2.54mm:PinSocket_1x20_P2.54mm_Vertical")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "TkNGVaKSwV")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "HDR20"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "88dabf87-a501-5c3f-bdd6-24d469b70897"))
+    (comp
+      (ref "C1")
+      (value "1000uF/100V")
+      (description "")
+      (footprint "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Bulk electrolytic, low ESR")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "ZrJRlzFqBU")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "1000uF/100V"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "11069c80-2161-5b5b-a382-926dce4b46c2"))
+    (comp
+      (ref "C10")
+      (value "1uF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0805_2012Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "TC4420 decoupling, close to pin 8")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "K8SHOO_cvN")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "1uF"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "f5272427-fc13-5267-9675-fe6a964187bb"))
+    (comp
+      (ref "C2")
+      (value "1000uF/100V")
+      (description "")
+      (footprint "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Bulk electrolytic, low ESR")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_THT:CP_Radial_D18.0mm_P7.50mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "H2nATRGGP_")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "1000uF/100V"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "57b2dbaf-0c49-52ab-a4ac-b3169c583a89"))
+    (comp
+      (ref "C3")
+      (value "1uF/100V")
+      (description "")
+      (footprint "Capacitor_SMD:C_1210_3225Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "X7R 100 V bypass at choke feed")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_1210_3225Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "AKyrYf_xsh")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "1uF/100V"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "6fc6a7fc-577f-5e2d-b42b-c685ec6eec1b"))
+    (comp
+      (ref "C4")
+      (value "1uF/100V")
+      (description "")
+      (footprint "Capacitor_SMD:C_1210_3225Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "X7R 100 V bypass at choke feed")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_1210_3225Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "RR0QckNrUG")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "1uF/100V"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "87874920-3683-50d9-8bb5-79275a8d8516"))
+    (comp
+      (ref "C5")
+      (value "100nF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "INA180 decoupling")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "tDE3p2U70k")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "100nF"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "f1a39a52-4e48-5a42-8fe6-ee4d8585b311"))
+    (comp
+      (ref "C6")
+      (value "10nF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "ISENSE filter (with trace R≈1k) ~16 kHz")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "h2O91ugxb5")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "10nF"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "ebef7cc7-846b-5a62-907c-70f5311967fd"))
+    (comp
+      (ref "C7")
+      (value "100nF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "VSENSE filter")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "oZRWzLmqAq")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "100nF"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "986f5c98-1222-56a2-8a4e-fdfbc595ad33"))
+    (comp
+      (ref "C8")
+      (value "100uF/25V")
+      (description "")
+      (footprint "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "+12 V rail bulk")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "ZdTtnSzjq4")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "100uF/25V"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "0104730e-a6fb-5077-a704-90929f87b720"))
+    (comp
+      (ref "C9")
+      (value "10uF")
+      (description "")
+      (footprint "Capacitor_SMD:C_0805_2012Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "+5 V bulk")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "lK6RMiZ_a_")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "10uF"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "657a1ebf-ed0a-5227-87f0-dc8d0b125e1c"))
+    (comp
+      (ref "D5")
+      (value "SMCJ70A")
+      (description "")
+      (footprint "Diode_SMD:D_SMC")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "TVS 70 V standoff, SMC")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Diode_SMD:D_SMC")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "xeqAxT3jdb")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "SMCJ70A"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "6b0eb59d-03f6-5b59-9d26-b73e709ffcec"))
+    (comp
+      (ref "D6")
+      (value "1N4148W")
+      (description "")
+      (footprint "Diode_SMD:D_SOD-123")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Fan flyback")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Diode_SMD:D_SOD-123")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "81e1zpbJUQ")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "1N4148W"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "dba7b161-16d6-5ef3-95f4-9883aea793da"))
+    (comp
+      (ref "D7")
+      (value "UF4007")
+      (description "")
+      (footprint "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Gate→opposite drain feedback")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "X408F2FcqL")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "UF4007"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "62c04aec-0869-550f-b144-96eec78870ec"))
+    (comp
+      (ref "D8")
+      (value "UF4007")
+      (description "")
+      (footprint "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Gate→opposite drain feedback")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "cpZtfajNh3")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "UF4007"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "6f3a7ca0-da0f-5b17-b3c0-d2daf88d9000"))
+    (comp
+      (ref "H1")
+      (value "M3")
+      (description "")
+      (footprint "MountingHole:MountingHole_3.2mm_M3")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "M3 standoff")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "MountingHole:MountingHole_3.2mm_M3")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "KtuDNrfb4z")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "M3"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "5507eebd-429a-50c8-bb47-197f1696cb5e"))
+    (comp
+      (ref "H2")
+      (value "M3")
+      (description "")
+      (footprint "MountingHole:MountingHole_3.2mm_M3")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "M3 standoff")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "MountingHole:MountingHole_3.2mm_M3")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "LPNJQEK7VO")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "M3"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "031d7bb6-f051-5477-8acc-835be1cff8d5"))
+    (comp
+      (ref "H3")
+      (value "M3")
+      (description "")
+      (footprint "MountingHole:MountingHole_3.2mm_M3")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "M3 standoff")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "MountingHole:MountingHole_3.2mm_M3")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "ZyT6r06bKZ")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "M3"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "dcc88fac-362c-50b5-a11e-a29cdb248710"))
+    (comp
+      (ref "H4")
+      (value "M3")
+      (description "")
+      (footprint "MountingHole:MountingHole_3.2mm_M3")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "M3 standoff")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "MountingHole:MountingHole_3.2mm_M3")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "E2vLfW0_SW")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "M3"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "18ba6493-62cb-5ffe-b746-f24ecedf4186"))
+    (comp
+      (ref "J1")
+      (value "M4")
+      (description "")
+      (footprint "MountingHole:MountingHole_4.3mm_M4_Pad")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Pack B+ (from inline 40 A fuse), ring terminal, 10 AWG")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "MountingHole:MountingHole_4.3mm_M4_Pad")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "OC982zHcDf")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "M4"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "d5c8ded5-e6f0-58ac-83e3-bfd77f776c44"))
+    (comp
+      (ref "J10")
+      (value "HDR2")
+      (description "")
+      (footprint "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Piezo buzzer, JST-XH 2p")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "NCF24yLRXz")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "HDR2"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "63b27ebf-3127-5ac6-a1b7-af1905a8a8a8"))
+    (comp
+      (ref "J2")
+      (value "M4")
+      (description "")
+      (footprint "MountingHole:MountingHole_4.3mm_M4_Pad")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Pack B−, ring terminal, 10 AWG")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "MountingHole:MountingHole_4.3mm_M4_Pad")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "NEHDZnLmsA")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "M4"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "8d8f39d5-d0da-5e98-bf88-d4d49c239ff3"))
+    (comp
+      (ref "J3")
+      (value "M4")
+      (description "")
+      (footprint "MountingHole:MountingHole_4.3mm_M4_Pad")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Lead to XT90 pin 1 (D1), 10 AWG")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "MountingHole:MountingHole_4.3mm_M4_Pad")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "3bFi_HyOAx")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "M4"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "7fc337cf-aed4-5c84-8ce3-14ff6c0d9a5f"))
+    (comp
+      (ref "J4")
+      (value "M4")
+      (description "")
+      (footprint "MountingHole:MountingHole_4.3mm_M4_Pad")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Lead to XT90 pin 2 (D2), 10 AWG")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "MountingHole:MountingHole_4.3mm_M4_Pad")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "dLQ3921Ujz")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "M4"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "998d0030-eeda-5cff-8464-039504634435"))
+    (comp
+      (ref "J5")
+      (value "HDR2")
+      (description "")
+      (footprint "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "NTC 10 k B3950 on heatsink, JST-XH 2p")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "V00vhCBeUk")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "HDR2"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "cd8ae45d-a353-5687-a386-8971d73d607f"))
+    (comp
+      (ref "J6")
+      (value "HDR2")
+      (description "")
+      (footprint "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Fan 12 V, JST-XH 2p (+12 V, FAN_N)")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "pnGEr6oEZB")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "HDR2"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "c677ea16-cf81-585c-9262-fafc6513ebbf"))
+    (comp
+      (ref "J7")
+      (value "HDR2")
+      (description "")
+      (footprint "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Trigger, JST-XH 2p")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "FnR2UCKEjR")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "HDR2"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "688720bc-a15e-509a-b7f1-12facb6441b7"))
+    (comp
+      (ref "J8")
+      (value "HDR3")
+      (description "")
+      (footprint "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Head ID, JST-XH 3p (ID0, ID1, GND) → panel")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "eg2hLyreEW")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "HDR3"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "07e0a539-b38a-57e3-9336-a5e9cda520d5"))
+    (comp
+      (ref "J9")
+      (value "HDR4")
+      (description "")
+      (footprint "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "RGB LED common cathode (R, G, B, GND), JST-XH 4p")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "JfgQ6K1nOw")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "HDR4"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "a39e2016-e693-5a7e-9d72-ddaa0425bc02"))
+    (comp
+      (ref "L1")
+      (value "47uH/20A")
+      (description "")
+      (footprint "Inductor_THT:L_Toroid_Horizontal_D28.0mm_P30.00mm_Fastron_DSP")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Choke, 30 t 14 AWG on sendust toroid (ADJUST footprint)")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Inductor_THT:L_Toroid_Horizontal_D28.0mm_P30.00mm_Fastron_DSP")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "LlmjVkhQR5")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "47uH/20A"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "2cb6dcc5-c102-54af-9e65-9f5daa293a7a"))
+    (comp
+      (ref "L2")
+      (value "47uH/20A")
+      (description "")
+      (footprint "Inductor_THT:L_Toroid_Horizontal_D28.0mm_P30.00mm_Fastron_DSP")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Choke, 30 t 14 AWG on sendust toroid (ADJUST footprint)")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Inductor_THT:L_Toroid_Horizontal_D28.0mm_P30.00mm_Fastron_DSP")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "66b5LZD_Pv")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "47uH/20A"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "9c24eb20-53d4-5cb6-96d6-f10c08594ed7"))
+    (comp
+      (ref "Q1")
+      (value "IRFP4332")
+      (description "")
+      (footprint "Package_TO_SOT_THT:TO-247-3_Vertical")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "250 V 57 A, heatsink, Mouser only")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Package_TO_SOT_THT:TO-247-3_Vertical")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "gns5WIlQrc")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "IRFP4332"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "c257264b-d8ab-564c-a924-64abc1c9722c"))
+    (comp
+      (ref "Q2")
+      (value "IRFP4332")
+      (description "")
+      (footprint "Package_TO_SOT_THT:TO-247-3_Vertical")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "250 V 57 A, heatsink, Mouser only")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Package_TO_SOT_THT:TO-247-3_Vertical")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "7fEB8Xv_mb")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "IRFP4332"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "e1fe26a1-5f1c-54c6-aaa2-f7c8e853cae2"))
+    (comp
+      (ref "Q3")
+      (value "IRFB4110")
+      (description "")
+      (footprint "Package_TO_SOT_THT:TO-220-3_Vertical")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "100 V 4.5 mΩ burst switch, small heatsink")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Package_TO_SOT_THT:TO-220-3_Vertical")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "TxZ216aMh8")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "IRFB4110"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "8fd6ac1b-0511-5c3e-b722-19d56b3155be"))
+    (comp
+      (ref "Q4")
+      (value "2N7002")
+      (description "")
+      (footprint "Package_TO_SOT_SMD:SOT-23")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Fan low-side switch")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Package_TO_SOT_SMD:SOT-23")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "VK2ypYaKI8")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "2N7002"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "3a2708ba-6cc4-5f81-8ce3-39c05fd15f10"))
+    (comp
+      (ref "R1")
+      (value "100R/3W")
+      (description "")
+      (footprint "Resistor_THT:R_Axial_DIN0918_L18.0mm_D6.0mm_P22.86mm_Horizontal")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Gate pull-up from +12 V, wirewound 3 W")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0918_L18.0mm_D6.0mm_P22.86mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "iVO2lonByz")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "100R/3W"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "3362d086-e893-53d2-90a4-e6975c364c0e"))
+    (comp
+      (ref "R10")
+      (value "5.6k")
+      (description "")
+      (footprint "Resistor_SMD:R_0805_2012Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "V_pack divider bottom, 1 %")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "8ntBX_w2kv")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "5.6k"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "57c8d541-e7fd-5069-8a61-562195ead6cb"))
+    (comp
+      (ref "R11")
+      (value "10k")
+      (description "")
+      (footprint "Resistor_SMD:R_0805_2012Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "NTC pull-up to 3V3, 1 %")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "b4zEtZiH1r")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "10k"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "5a38e164-3e16-507a-9368-20a6ed0f471d"))
+    (comp
+      (ref "R12")
+      (value "10k")
+      (description "")
+      (footprint "Resistor_SMD:R_0805_2012Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "EN pull-down: stage off while Pico boots")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "3cGUfW64Ow")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "10k"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "75cc45ac-6ec0-53ff-be6f-3ec4375bb425"))
+    (comp
+      (ref "R13")
+      (value "1k")
+      (description "")
+      (footprint "Resistor_SMD:R_0805_2012Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Fan gate")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "UGvRbLns5l")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "1k"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "a8ea002c-4120-5842-84ce-3918b200e57b"))
+    (comp
+      (ref "R14")
+      (value "330R")
+      (description "")
+      (footprint "Resistor_SMD:R_0805_2012Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "LED series")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "OqN2fO3eyf")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "330R"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "48090028-ff83-5af8-8405-b36252e4a431"))
+    (comp
+      (ref "R15")
+      (value "330R")
+      (description "")
+      (footprint "Resistor_SMD:R_0805_2012Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "LED series")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "YJVM08jCQr")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "330R"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "caa3982a-1fda-5546-ad43-139c47879db6"))
+    (comp
+      (ref "R16")
+      (value "330R")
+      (description "")
+      (footprint "Resistor_SMD:R_0805_2012Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "LED series")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "ZMQBm_WOj9")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "330R"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "30667c32-6b18-5a91-8eb3-60651e71c087"))
+    (comp
+      (ref "R17")
+      (value "10k")
+      (description "")
+      (footprint "Resistor_SMD:R_0805_2012Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Gate-source hold-off")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "o07UV05yMm")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "10k"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "ac430d98-05e3-5bca-a3a5-20c397f8e5ad"))
+    (comp
+      (ref "R18")
+      (value "10k")
+      (description "")
+      (footprint "Resistor_SMD:R_0805_2012Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Gate-source hold-off")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "ezOutCHJeM")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "10k"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "62852a56-ab60-5e47-985a-fbbbea69f454"))
+    (comp
+      (ref "R2")
+      (value "100R/3W")
+      (description "")
+      (footprint "Resistor_THT:R_Axial_DIN0918_L18.0mm_D6.0mm_P22.86mm_Horizontal")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Gate pull-up from +12 V, wirewound 3 W")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_DIN0918_L18.0mm_D6.0mm_P22.86mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "2K_sencUZf")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "100R/3W"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "dd069727-0e6e-57e5-bde3-97892b7f2b7b"))
+    (comp
+      (ref "R3")
+      (value "100R/5W")
+      (description "")
+      (footprint "Resistor_THT:R_Axial_Power_L20.0mm_W6.4mm_P25.40mm")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Bulk-cap pre-charge across Q3")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_THT:R_Axial_Power_L20.0mm_W6.4mm_P25.40mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "YVBUDj7liV")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "100R/5W"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "864fb24d-adfe-5b24-b1c1-53bd7038dff9"))
+    (comp
+      (ref "R4")
+      (value "10R")
+      (description "")
+      (footprint "Resistor_SMD:R_0805_2012Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Q3 gate resistor")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "RRpcOfjc9Y")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "10R"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "ba95e66f-6975-5a72-b084-55458cfc4ad3"))
+    (comp
+      (ref "R5")
+      (value "10k")
+      (description "")
+      (footprint "Resistor_SMD:R_0805_2012Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Q3 gate pull-down")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "ko3StKCZ9H")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "10k"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "24c9a2a8-699b-52ef-b33d-79c72cb534e6"))
+    (comp
+      (ref "R6")
+      (value "2mR/3W")
+      (description "")
+      (footprint "Resistor_SMD:R_2512_6332Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Shunt, metal strip 2512 3 W")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_2512_6332Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "eoBX5sKnkZ")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "2mR/3W"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "b0e5be57-b378-517c-a919-604a1a065665"))
+    (comp
+      (ref "R7")
+      (value "2mR/3W")
+      (description "")
+      (footprint "Resistor_SMD:R_2512_6332Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Shunt, metal strip 2512 3 W")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_2512_6332Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "g5TO9vn1rJ")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "2mR/3W"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "097f697c-92e3-51a2-83f2-288e8701c582"))
+    (comp
+      (ref "R8")
+      (value "1k")
+      (description "")
+      (footprint "Resistor_SMD:R_0805_2012Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "ISENSE series / filter")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "W88xmk2zk1")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "1k"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "2beee0e9-461a-59f6-9943-6cff03a80fe9"))
+    (comp
+      (ref "R9")
+      (value "100k")
+      (description "")
+      (footprint "Resistor_SMD:R_0805_2012Metric")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "V_pack divider top, 1 %")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "zpI28l1cU5")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "100k"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "e99ccb80-2dac-5843-8633-48cf7a0fde0d"))
+    (comp
+      (ref "U1")
+      (value "TC4420CPA")
+      (description "")
+      (footprint "Package_DIP:DIP-8_W7.62mm")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "6 A MOSFET driver, TTL input")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Package_DIP:DIP-8_W7.62mm")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "IdWq_8GByr")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "TC4420CPA"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "17acec77-5e85-55fd-a8d3-59a16fc61091"))
+    (comp
+      (ref "U2")
+      (value "INA180A2")
+      (description "")
+      (footprint "Package_TO_SOT_SMD:SOT-23-5")
+      (fields
+        (field
+          (name "JLC") "SMT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Current-sense amp, gain 50 → 50 mV/A with 1 mΩ")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Package_TO_SOT_SMD:SOT-23-5")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "x_QhO2hLKY")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "INA180A2"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "a25de0be-2552-5a12-85f8-d9a479e6adf2"))
+    (comp
+      (ref "U3")
+      (value "HDR4")
+      (description "")
+      (footprint "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "XL7015 buck module 5–80 V → 12 V (IN+ IN- OUT+ OUT-)")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "UYtRNmk9Wv")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "HDR4"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "0795beb4-919d-5972-afe7-961b7a8e5890"))
+    (comp
+      (ref "U4")
+      (value "HDR4")
+      (description "")
+      (footprint "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "MP1584 buck module 12 → 5 V (IN+ IN- OUT+ OUT-)")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "PoC79zSxT5")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "HDR4"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "0beb3482-be2e-5589-b77d-0b1ab6ea5c13"))
+    (comp
+      (ref "ZD1")
+      (value "15V/1.3W")
+      (description "")
+      (footprint "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Gate zener clamp")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "Nhgvq2J8cv")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "15V/1.3W"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "cf65a014-bc63-5b2a-9de0-b9851fdb9057"))
+    (comp
+      (ref "ZD2")
+      (value "15V/1.3W")
+      (description "")
+      (footprint "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal")
+      (fields
+        (field
+          (name "JLC") "THT")
+        (field
+          (name "LCSC"))
+        (field
+          (name "Desc") "Gate zener clamp")
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "LLuDt4KrxF")
+        (field
+          (name "SKiDL Line") "netlist.py:30"))
+      (libsource
+        (lib "NO_LIB")
+        (part "15V/1.3W"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (tstamps "b76abece-5f87-5ca7-8880-7e42114c9012")))
+  (nets
+    (net
+      (code 1)
+      (name "+12V")
+      (class "Default")
+      (node
+        (ref "C10")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C8")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "D6")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J6")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R1")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R2")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "8")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U3")
+        (pin "3")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U4")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 2)
+      (name "+3V3")
+      (class "Default")
+      (node
+        (ref "A2")
+        (pin "16")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R11")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 3)
+      (name "+5V")
+      (class "Default")
+      (node
+        (ref "A2")
+        (pin "19")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C5")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C9")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U2")
+        (pin "5")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U4")
+        (pin "3")
+        (pintype "PASSIVE")))
+    (net
+      (code 4)
+      (name "BUZZ")
+      (class "Default")
+      (node
+        (ref "A1")
+        (pin "17")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J10")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 5)
+      (name "D1")
+      (class "Default")
+      (node
+        (ref "D8")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J3")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "L1")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "Q1")
+        (pin "2")
+        (pintype "PASSIVE")))
+    (net
+      (code 6)
+      (name "D2")
+      (class "Default")
+      (node
+        (ref "D7")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J4")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "L2")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "Q2")
+        (pin "2")
+        (pintype "PASSIVE")))
+    (net
+      (code 7)
+      (name "EN")
+      (class "Default")
+      (node
+        (ref "A1")
+        (pin "20")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R12")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "2")
+        (pintype "INPUT")))
+    (net
+      (code 8)
+      (name "FAN_EN")
+      (class "Default")
+      (node
+        (ref "A1")
+        (pin "19")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R13")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 9)
+      (name "FAN_GATE")
+      (class "Default")
+      (node
+        (ref "Q4")
+        (pin "1")
+        (pintype "INPUT"))
+      (node
+        (ref "R13")
+        (pin "2")
+        (pintype "PASSIVE")))
+    (net
+      (code 10)
+      (name "FAN_N")
+      (class "Default")
+      (node
+        (ref "D6")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J6")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "Q4")
+        (pin "3")
+        (pintype "PASSIVE")))
+    (net
+      (code 11)
+      (name "GATE_A")
+      (class "Default")
+      (node
+        (ref "D7")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "Q1")
+        (pin "1")
+        (pintype "INPUT"))
+      (node
+        (ref "R1")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R17")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "ZD1")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 12)
+      (name "GATE_B")
+      (class "Default")
+      (node
+        (ref "D8")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "Q2")
+        (pin "1")
+        (pintype "INPUT"))
+      (node
+        (ref "R18")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R2")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "ZD2")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 13)
+      (name "GND")
+      (class "Default")
+      (node
+        (ref "A1")
+        (pin "13")
+        (pintype "PASSIVE"))
+      (node
+        (ref "A1")
+        (pin "18")
+        (pintype "PASSIVE"))
+      (node
+        (ref "A1")
+        (pin "3")
+        (pintype "PASSIVE"))
+      (node
+        (ref "A1")
+        (pin "8")
+        (pintype "PASSIVE"))
+      (node
+        (ref "A2")
+        (pin "13")
+        (pintype "PASSIVE"))
+      (node
+        (ref "A2")
+        (pin "18")
+        (pintype "PASSIVE"))
+      (node
+        (ref "A2")
+        (pin "3")
+        (pintype "PASSIVE"))
+      (node
+        (ref "A2")
+        (pin "8")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C1")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C10")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C2")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C3")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C4")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C5")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C6")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C7")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C8")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C9")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "D5")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J10")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J2")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J5")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J7")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J8")
+        (pin "3")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J9")
+        (pin "4")
+        (pintype "PASSIVE"))
+      (node
+        (ref "Q4")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R10")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R12")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R5")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R6")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R7")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "4")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U1")
+        (pin "5")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U2")
+        (pin "2")
+        (pintype "POWER-IN"))
+      (node
+        (ref "U2")
+        (pin "4")
+        (pintype "INPUT"))
+      (node
+        (ref "U3")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U3")
+        (pin "4")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U4")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U4")
+        (pin "4")
+        (pintype "PASSIVE")))
+    (net
+      (code 14)
+      (name "HEAD_ID0")
+      (class "Default")
+      (node
+        (ref "A2")
+        (pin "9")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J8")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 15)
+      (name "HEAD_ID1")
+      (class "Default")
+      (node
+        (ref "A2")
+        (pin "7")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J8")
+        (pin "2")
+        (pintype "PASSIVE")))
+    (net
+      (code 16)
+      (name "ISENSE")
+      (class "Default")
+      (node
+        (ref "R8")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U2")
+        (pin "1")
+        (pintype "OUTPUT")))
+    (net
+      (code 17)
+      (name "ISENSE_F")
+      (class "Default")
+      (node
+        (ref "A2")
+        (pin "11")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C6")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R8")
+        (pin "2")
+        (pintype "PASSIVE")))
+    (net
+      (code 18)
+      (name "LED_B_P")
+      (class "Default")
+      (node
+        (ref "A1")
+        (pin "16")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R16")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 19)
+      (name "LED_G_P")
+      (class "Default")
+      (node
+        (ref "A1")
+        (pin "15")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R15")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 20)
+      (name "LED_R_P")
+      (class "Default")
+      (node
+        (ref "A1")
+        (pin "14")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R14")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 21)
+      (name "N$1")
+      (class "Default")
+      (node
+        (ref "R4")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U1")
+        (pin "6")
+        (pintype "OUTPUT"))
+      (node
+        (ref "U1")
+        (pin "7")
+        (pintype "PASSIVE")))
+    (net
+      (code 22)
+      (name "N$2")
+      (class "Default")
+      (node
+        (ref "J9")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R14")
+        (pin "2")
+        (pintype "PASSIVE")))
+    (net
+      (code 23)
+      (name "N$3")
+      (class "Default")
+      (node
+        (ref "J9")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R15")
+        (pin "2")
+        (pintype "PASSIVE")))
+    (net
+      (code 24)
+      (name "N$4")
+      (class "Default")
+      (node
+        (ref "J9")
+        (pin "3")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R16")
+        (pin "2")
+        (pintype "PASSIVE")))
+    (net
+      (code 25)
+      (name "Q3_GATE")
+      (class "Default")
+      (node
+        (ref "Q3")
+        (pin "1")
+        (pintype "INPUT"))
+      (node
+        (ref "R4")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R5")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 26)
+      (name "SHUNT_HI")
+      (class "Default")
+      (node
+        (ref "Q3")
+        (pin "3")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R3")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R6")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R7")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U2")
+        (pin "3")
+        (pintype "INPUT")))
+    (net
+      (code 27)
+      (name "TRIG")
+      (class "Default")
+      (node
+        (ref "A2")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J7")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 28)
+      (name "TSENSE")
+      (class "Default")
+      (node
+        (ref "A2")
+        (pin "14")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J5")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R11")
+        (pin "2")
+        (pintype "PASSIVE")))
+    (net
+      (code 29)
+      (name "VPACK")
+      (class "Default")
+      (node
+        (ref "C1")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C2")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C3")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C4")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "D5")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "J1")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "L1")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "L2")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R9")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "U3")
+        (pin "1")
+        (pintype "PASSIVE")))
+    (net
+      (code 30)
+      (name "VSENSE")
+      (class "Default")
+      (node
+        (ref "A2")
+        (pin "12")
+        (pintype "PASSIVE"))
+      (node
+        (ref "C7")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R10")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R9")
+        (pin "2")
+        (pintype "PASSIVE")))
+    (net
+      (code 31)
+      (name "ZVS_GND")
+      (class "Default")
+      (node
+        (ref "Q1")
+        (pin "3")
+        (pintype "PASSIVE"))
+      (node
+        (ref "Q2")
+        (pin "3")
+        (pintype "PASSIVE"))
+      (node
+        (ref "Q3")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R17")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R18")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "R3")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "ZD1")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "ZD2")
+        (pin "2")
+        (pintype "PASSIVE")))))

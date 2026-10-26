@@ -1,68 +1,84 @@
 # ego-coil
 
-A handheld induction bolt heater that runs on an EGO 56 V tool battery.
-Open hardware: ZVS power stage in the body, swappable coil heads that carry
-their own resonant caps, and a small RP2040 supervisor that keeps the
-battery's BMS happy and the MOSFETs alive.
+**A handheld induction bolt heater that runs on an EGO 56 V lawn-tool battery.
+About $90 in parts, a weekend to build, and it does what the $500+ commercial
+units do: heats a seized nut red-hot in a few seconds with no flame.**
 
-```
-EGO pack ─┤ body: fuse → bulk caps → ZVS stage → main switch → supervisor ├══ lead ══╡ head: coil + cap bank ╞
-```
+![schematic](docs/images/schematic.png)
 
-**Status: design stage.** Nothing here has been built yet. The numbers are
-engineering estimates from first principles; the bring-up order in
-`docs/design.md` §7 is written so that the estimates get replaced by
-measurements before anything runs on the battery.
+The design is a ZVS (Mazzilli) oscillator — the same simple circuit behind
+every cheap induction heater — done properly for 56 V: 250 V MOSFETs, a
+custom 2 oz PCB so the gate loops are short, resonant capacitors moved
+**into the coil head** so the lead stays thin and flexible, and a Raspberry
+Pi Pico that trips before the battery's BMS does. Heads are swappable:
+a nut coil, a pencil coil for tight spots, a pancake for flat panels.
 
-## What's in the repo
+> **Status: designed, not yet built.** Everything here comes from first
+> principles and has been cross-checked, but no one has heated a bolt with it
+> yet. The build guide is written so the first build replaces the estimates
+> with measurements *before* the battery goes on. If you build one, open an
+> issue with what you measured.
 
-| Path | What |
+## What you get
+
+| | |
 |---|---|
-| `docs/design.md` | The electrical design, with the reasoning for every choice, plus safety and bring-up order |
-| `docs/bom.md` | Parts list — a ~$86 budget column and a name-brand reference column |
-| `docs/schematic.svg` | Schematic of the body (power stage, main switch, supervisor) and a head |
-| `tools/zvs_tank.py` | Coil / cap / frequency / current calculator — run it for every new head |
-| `firmware/` | MicroPython supervisor for a Raspberry Pi Pico |
-| `cad/` | CadQuery: parametric body, head shell and EGO dock (STLs in `cad/out/`) |
-| `docs/dock-measurement.md` | Fitting the EGO dock (`cad/ego56v_dock.stl`) under the body; parametric fallback |
+| ![body](docs/images/body.png) | ![head](docs/images/head.png) |
+| Body: PCB, heatsink, Pico, EGO dock underneath | Head: coil + cap bank, swappable on an XT90 |
 
-## Design in one paragraph
-
-A ZVS (Mazzilli) push-pull oscillator is the cheapest reliable way to drive an
-induction tank, and 56 V is a good voltage for it. At 56 V the MOSFET drains
-swing to ~180 V, so the stage uses 250 V parts. The resonant capacitors sit
-in the **head** next to the coil, not in the body, so the 150–250 A
-circulating current never travels down the lead; the lead only carries the
-~30 A drain current and can be a short twisted pair. Each head is a tuned
-tank on its own; the ZVS stage locks to whatever head is plugged in. A Pico
-watches bus current, heatsink temperature and run time, switches the stage
-on and off in burst mode for power levels, and trips before the pack's BMS
-does.
-
-## Quick start
-
-```bash
-# what does a given coil want for caps and what will it draw?
-python tools/zvs_tank.py --turns 8 --diameter 45 --pitch 9 --vdc 56 --caps 1.5 --n-caps 15
-python tools/zvs_tank.py --turns 5 --diameter 25 --pitch 8 --sweep        # pencil coil
-python tools/zvs_tank.py --turns 8 --diameter 45 --pitch 9 --freq 120     # solve for C
+```
+EGO pack ─┤ BODY: fuse → ZVS stage → burst switch → supervisor ├══ 25 cm lead ══╡ HEAD: coil + caps ╞
 ```
 
-Firmware: copy `firmware/*.py` to the Pico with Thonny or `mpremote cp
-firmware/*.py :`. Pin assignments and trip thresholds are in
-`firmware/config.py`.
+## Build it
 
-CAD: `pip install cadquery && python cad/build_cad.py`; parameters are the
-dictionaries at the top of the file, STLs land in `cad/out/`.
+Read these in order; they are written for someone who can solder and has
+used a multimeter but has never built an induction heater.
 
-## Safety
+1. **[docs/build-guide.md](docs/build-guide.md)** — the step-by-step build, start to finish
+2. **[docs/bom.md](docs/bom.md)** — parts list, ~$86 budget column and a name-brand column
+3. **[docs/design.md](docs/design.md)** — why every part is what it is, plus the safety section (read §6 even if you skip the rest)
 
-Read `docs/design.md` §6 before building. Short version: strong magnetic
-field (implants), red-hot metal, 200 V at 100 kHz in the head, and a lithium
-pack that will deliver hundreds of amps into a fault. The 40 A fuse at the
-pack is not optional.
+Then the pieces:
 
-## License
+| Folder | What's in it |
+|---|---|
+| [`pcb/`](pcb/) | Main board: circuit-as-code (`netlist.py`), KiCad netlist, BOM with JLCPCB assembly flags, placement plan |
+| [`cad/`](cad/) | Parametric enclosure (CadQuery): body, lid, coil head, and the EGO dock STL. STLs are in `cad/out/` |
+| [`firmware/`](firmware/) | MicroPython for the Pico: trigger, power levels, overcurrent / overtemp / timeout trips |
+| [`tools/`](tools/) | `zvs_tank.py` coil-and-capacitor calculator — run it for every new head |
+| [`docs/`](docs/) | Design, BOM, build guide, dock fitting, schematic |
 
-CERN-OHL-P v2 for hardware, MIT for firmware and tools. Pick what suits
-when you publish; both are permissive.
+## Quick numbers
+
+| | |
+|---|---|
+| Battery | EGO 56 V, 5 Ah or larger (2.5 Ah packs trip their BMS) |
+| Power | 1–3 kW into the work, limited to ~2 kW by the 38 A current trip |
+| Frequency | ~110–130 kHz with the reference 8-turn coil |
+| Duty | 20 s bursts, cooldown enforced by firmware |
+| Parts cost | ~$86 (scrap CPU cooler, printed dock), ~$100 all new |
+| Tools you need | soldering iron, 3D printer, oscilloscope (a used $40 one is fine), bench supply for bring-up |
+
+## Safety, in one paragraph
+
+This is a 2 kW RF magnetic field on the end of a lithium battery. Keep
+people with pacemakers or implants well away. Rings and watches off. Nothing
+near fuel lines, brake lines or gas tanks. The work and the coil get hot
+enough to burn through gloves. The 40 A fuse at the battery is not optional,
+and the head carries 200 V at 100 kHz, so no exposed metal except the coil.
+`docs/design.md` §6 has the full list.
+
+## Contributing
+
+Measured numbers beat calculated ones. If you build one, the things worth
+reporting back are: measured coil inductance, the frequency with a bolt in
+the coil, pack current at full duty, and how hot the caps get after a 20 s
+run. Open an issue or a PR.
+
+## Licence
+
+Hardware (docs, CAD, PCB): [CERN-OHL-P v2](LICENSE). Firmware and tools: MIT
+(see `LICENSE`). The EGO dock STL (`cad/ego56v_dock.stl`) was contributed
+separately and keeps whatever licence it came with; replace it with the
+parametric fallback in `cad/build_cad.py` if that matters to you.

@@ -1,0 +1,135 @@
+WARNING: KICAD_SYMBOL_DIR environment variable is missing, so the default KiCad symbol libraries won't be searched. @ [/home/claude/ego-coil-git/<frozen importlib._bootstrap_external>:1027=>/home/claude/ego-coil-git/<frozen importlib._bootstrap>:488]
+WARNING: KICAD10_SYMBOL_DIR environment variable is missing, so the default KiCad symbol libraries won't be searched. @ [/home/claude/ego-coil-git/<frozen importlib._bootstrap_external>:1027=>/home/claude/ego-coil-git/<frozen importlib._bootstrap>:488]
+WARNING: KICAD6_SYMBOL_DIR environment variable is missing, so the default KiCad symbol libraries won't be searched. @ [/home/claude/ego-coil-git/<frozen importlib._bootstrap_external>:1027=>/home/claude/ego-coil-git/<frozen importlib._bootstrap>:488]
+WARNING: KICAD7_SYMBOL_DIR environment variable is missing, so the default KiCad symbol libraries won't be searched. @ [/home/claude/ego-coil-git/<frozen importlib._bootstrap_external>:1027=>/home/claude/ego-coil-git/<frozen importlib._bootstrap>:488]
+WARNING: KICAD8_SYMBOL_DIR environment variable is missing, so the default KiCad symbol libraries won't be searched. @ [/home/claude/ego-coil-git/<frozen importlib._bootstrap_external>:1027=>/home/claude/ego-coil-git/<frozen importlib._bootstrap>:488]
+WARNING: KICAD9_SYMBOL_DIR environment variable is missing, so the default KiCad symbol libraries won't be searched. @ [/home/claude/ego-coil-git/<frozen importlib._bootstrap_external>:1027=>/home/claude/ego-coil-git/<frozen importlib._bootstrap>:488]
+WARNING: fp-lib-table file was not found. Component footprints are not available.
+WARNING: fp-lib-table file was not found. Component footprints are not available.
+WARNING: fp-lib-table file was not found. Component footprints are not available.
+WARNING: fp-lib-table file was not found. Component footprints are not available.
+WARNING: fp-lib-table file was not found. Component footprints are not available.
+WARNING: Missing tag on M4 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag OC982zHcDf generated for M4.
+WARNING: Missing tag on M4 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag NEHDZnLmsA generated for M4.
+WARNING: Missing tag on M4 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag 3bFi_HyOAx generated for M4.
+WARNING: Missing tag on M4 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag dLQ3921Ujz generated for M4.
+WARNING: Missing tag on SMCJ70A instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag xeqAxT3jdb generated for SMCJ70A.
+WARNING: Missing tag on 1000uF/100V instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag ZrJRlzFqBU generated for 1000uF/100V.
+WARNING: Missing tag on 1000uF/100V instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag H2nATRGGP_ generated for 1000uF/100V.
+WARNING: Missing tag on 1uF/100V instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag AKyrYf_xsh generated for 1uF/100V.
+WARNING: Missing tag on 1uF/100V instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag RR0QckNrUG generated for 1uF/100V.
+WARNING: Missing tag on 47uH/20A instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag LlmjVkhQR5 generated for 47uH/20A.
+WARNING: Missing tag on 47uH/20A instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag 66b5LZD_Pv generated for 47uH/20A.
+WARNING: Missing tag on IRFP4332 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag gns5WIlQrc generated for IRFP4332.
+WARNING: Missing tag on IRFP4332 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag 7fEB8Xv_mb generated for IRFP4332.
+WARNING: Missing tag on 100R/3W instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag iVO2lonByz generated for 100R/3W.
+WARNING: Missing tag on UF4007 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag X408F2FcqL generated for UF4007.
+WARNING: Missing tag on 15V/1.3W instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag Nhgvq2J8cv generated for 15V/1.3W.
+WARNING: Missing tag on 10k instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag o07UV05yMm generated for 10k.
+WARNING: Missing tag on 100R/3W instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag 2K_sencUZf generated for 100R/3W.
+WARNING: Missing tag on UF4007 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag cpZtfajNh3 generated for UF4007.
+WARNING: Missing tag on 15V/1.3W instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag LLuDt4KrxF generated for 15V/1.3W.
+WARNING: Missing tag on 10k instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag ezOutCHJeM generated for 10k.
+WARNING: Missing tag on IRFB4110 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag TxZ216aMh8 generated for IRFB4110.
+WARNING: Missing tag on 100R/5W instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag YVBUDj7liV generated for 100R/5W.
+WARNING: Missing tag on 10R instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag RRpcOfjc9Y generated for 10R.
+WARNING: Missing tag on 10k instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag ko3StKCZ9H generated for 10k.
+WARNING: Missing tag on 2mR/3W instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag eoBX5sKnkZ generated for 2mR/3W.
+WARNING: Missing tag on 2mR/3W instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag g5TO9vn1rJ generated for 2mR/3W.
+WARNING: Missing tag on INA180A2 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag x_QhO2hLKY generated for INA180A2.
+WARNING: Missing tag on 100nF instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag tDE3p2U70k generated for 100nF.
+WARNING: Missing tag on 10nF instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag h2O91ugxb5 generated for 10nF.
+WARNING: Missing tag on 1k instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag W88xmk2zk1 generated for 1k.
+WARNING: Missing tag on 100k instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag zpI28l1cU5 generated for 100k.
+WARNING: Missing tag on 5.6k instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag 8ntBX_w2kv generated for 5.6k.
+WARNING: Missing tag on 100nF instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag oZRWzLmqAq generated for 100nF.
+WARNING: Missing tag on HDR2 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag V00vhCBeUk generated for HDR2.
+WARNING: Missing tag on 10k instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag b4zEtZiH1r generated for 10k.
+WARNING: Missing tag on HDR4 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag UYtRNmk9Wv generated for HDR4.
+WARNING: Missing tag on HDR4 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag PoC79zSxT5 generated for HDR4.
+WARNING: Missing tag on 100uF/25V instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag ZdTtnSzjq4 generated for 100uF/25V.
+WARNING: Missing tag on 10uF instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag lK6RMiZ_a_ generated for 10uF.
+WARNING: Missing tag on TC4420CPA instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag IdWq_8GByr generated for TC4420CPA.
+WARNING: Missing tag on 1uF instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag K8SHOO_cvN generated for 1uF.
+WARNING: Missing tag on 10k instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag 3cGUfW64Ow generated for 10k.
+WARNING: Missing tag on 2N7002 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag VK2ypYaKI8 generated for 2N7002.
+WARNING: Missing tag on 1k instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag UGvRbLns5l generated for 1k.
+WARNING: Missing tag on HDR2 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag pnGEr6oEZB generated for HDR2.
+WARNING: Missing tag on 1N4148W instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag 81e1zpbJUQ generated for 1N4148W.
+WARNING: Missing tag on HDR2 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag FnR2UCKEjR generated for HDR2.
+WARNING: Missing tag on HDR3 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag eg2hLyreEW generated for HDR3.
+WARNING: Missing tag on HDR4 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag JfgQ6K1nOw generated for HDR4.
+WARNING: Missing tag on 330R instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag OqN2fO3eyf generated for 330R.
+WARNING: Missing tag on 330R instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag YJVM08jCQr generated for 330R.
+WARNING: Missing tag on 330R instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag ZMQBm_WOj9 generated for 330R.
+WARNING: Missing tag on HDR2 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag NCF24yLRXz generated for HDR2.
+WARNING: Missing tag on HDR20 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag NMsxoBpDX2 generated for HDR20.
+WARNING: Missing tag on HDR20 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag TkNGVaKSwV generated for HDR20.
+WARNING: Missing tag on M3 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag KtuDNrfb4z generated for M3.
+WARNING: Missing tag on M3 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag LPNJQEK7VO generated for M3.
+WARNING: Missing tag on M3 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag ZyT6r06bKZ generated for M3.
+WARNING: Missing tag on M3 instantiated at /home/claude/ego-coil-git/pcb/netlist.py:30.
+WARNING: Random tag E2vLfW0_SW generated for M3.
+WARNING: Missing tag on  instantiated at /home/claude/ego-coil-git/<frozen importlib._bootstrap>:488.
+INFO: 126 warnings found while generating netlist.
+INFO: 0 errors found while generating netlist.
+

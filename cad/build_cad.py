@@ -71,8 +71,8 @@ front = dict(                   # XT90 panel mount + JST-XH 3-pin for head ID
     jst_w=10.5, jst_h=6.5,
 )
 top = dict(trigger_d=16.2, led_d=5.2, buzzer_d=12.2)
-pico = dict(hole_x=47.0, hole_y=11.4, standoff_h=5, standoff_d=5, tap_d=1.8)
-powerboard = dict(hole_x=60, hole_y=40, standoff_h=6, standoff_d=7, tap_d=2.5)
+# (Pico is socketed on the main PCB; no separate standoffs)
+powerboard = dict(hole_x=92, hole_y=72, standoff_h=10, standoff_d=7, tap_d=2.5)   # pcb/ main board, 100 x 80
 
 head = dict(
     L=70, W=48, H=34,           # outer; X = toward the coil
@@ -174,10 +174,7 @@ def build_body():
     # --- standoffs on the floor: power board (rear half), Pico (front right)
     pb = powerboard
     part = standoffs(part, pb["hole_x"], pb["hole_y"], pb["standoff_h"], pb["standoff_d"], pb["tap_d"],
-                     center=(-45, 15), z0=wall)
-    p = pico
-    part = standoffs(part, p["hole_x"], p["hole_y"], p["standoff_h"], p["standoff_d"], p["tap_d"],
-                     center=(L / 4, -W / 4 + 8), z0=wall)
+                     center=(-25, 0), z0=wall)
     return part
 
 

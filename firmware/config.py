@@ -22,11 +22,11 @@ HEAD_DEFAULT = "nut"
 # ---- sensing scale factors ----
 ADC_VREF = 3.3
 ADC_MAX = 65535                      # read_u16()
-# "shunt": 2 mOhm shunt + INA180A1 (gain 20) -> 0.040 V/A, zero at 0 V, no divider
+# "shunt": 2 x 2 mOhm 2512 in parallel (1 mOhm) + INA180A2 (gain 50) -> 0.050 V/A, zero at 0 V
 # "hall":  ACS758LCB-050B via 10k/10k divider -> 2.5 V zero, 0.040 V/A at the sensor
 CURRENT_SENSOR = "shunt"
-SHUNT_OHMS = 0.002
-INA_GAIN = 20.0
+SHUNT_OHMS = 0.001
+INA_GAIN = 50.0
 CUR_DIVIDER = 2.0                    # hall only: 10k/10k
 CUR_ZERO_V = 2.5                     # hall only: ACS758 zero-current output
 CUR_SENS_V_PER_A = 0.040             # hall only: ACS758LCB-050B
