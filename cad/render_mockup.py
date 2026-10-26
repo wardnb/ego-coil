@@ -95,10 +95,11 @@ def build_scene():
     ca, sa = math.cos(math.radians(ang)), math.sin(math.radians(ang))
     head_back = (x0 + 175, -70, 40)  # world position of the head's back-face centre
     # last control point approaches the back face along the head axis
-    lead_pts = [(x0, -12, H / 2), (x0 + 60, -16, H / 2 - 2), (x0 + 120, -40, 42),
+    xz = H - b["wall"] - 12          # XT90 height on the front face (matches build_cad)
+    lead_pts = [(x0, -12, xz), (x0 + 60, -16, xz + 2), (x0 + 120, -40, 46),
                 (head_back[0] - 20 * ca, head_back[1] - 20 * sa, head_back[2]), head_back]
     parts.append((tube_along(lead_pts, 4.5), C_LEAD))
-    xt = cq.Workplane("YZ").workplane(offset=L / 2).center(-12, H / 2).rect(22, 13).extrude(6)
+    xt = cq.Workplane("YZ").workplane(offset=L / 2).center(-12, xz).rect(22, 13).extrude(6)
     parts.append((xt, C_LEAD))
 
     # ---- head: shell + lid, rotated so its +X (coil side) points along the lead direction

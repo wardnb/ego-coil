@@ -151,11 +151,12 @@ def build_body():
         slots = slots.moveTo(x, H / 2).rect(hs["slot_w"], hs["slot_h"])
     part = part.cut(slots.extrude(-(wall + 2)))
 
-    # --- front face (+X): XT90 + JST
+    # --- front face (+X): XT90 high on the face (clear of the hand), JST mid
     f = front
-    xt = (cq.Workplane("YZ").workplane(offset=L / 2 - wall - 1).center(-12, H / 2)
+    xt_z = H - wall - 12
+    xt = (cq.Workplane("YZ").workplane(offset=L / 2 - wall - 1).center(-12, xt_z)
           .rect(f["xt90_w"], f["xt90_h"]).extrude(wall + 2))
-    xts = (cq.Workplane("YZ").workplane(offset=L / 2 - wall - 1).center(-12, H / 2)
+    xts = (cq.Workplane("YZ").workplane(offset=L / 2 - wall - 1).center(-12, xt_z)
            .pushPoints([(-f["xt90_screw"] / 2, 0), (f["xt90_screw"] / 2, 0)])
            .circle(f["xt90_screw_d"] / 2).extrude(wall + 2))
     jst = (cq.Workplane("YZ").workplane(offset=L / 2 - wall - 1).center(22, H / 2)
