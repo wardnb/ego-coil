@@ -4,7 +4,9 @@
 About $90 in parts, a weekend to build, and it does what the $500+ commercial
 units do: heats a seized nut red-hot in a few seconds with no flame.**
 
-![schematic](docs/images/schematic.png)
+![assembled unit](docs/images/mockup-hero.png)
+
+*Mock-up of the assembled unit: body with the EGO pack docked underneath, 25 cm lead, nut-coil head heating a bolt. Rendered from the CAD in this repo (`cad/render_mockup.py`).*
 
 The design is a ZVS (Mazzilli) oscillator — the same simple circuit behind
 every cheap induction heater — done properly for 56 V: 250 V MOSFETs, a
@@ -23,8 +25,10 @@ a nut coil, a pencil coil for tight spots, a pancake for flat panels.
 
 | | |
 |---|---|
-| ![body](docs/images/body.png) | ![head](docs/images/head.png) |
-| Body: PCB, heatsink, Pico, EGO dock underneath | Head: coil + cap bank, swappable on an XT90 |
+| ![head](docs/images/mockup-head.png) | ![top](docs/images/mockup-top.png) |
+| Head: 8-turn copper coil with the cap bank in the shell behind it; swappable on an XT90 | Trigger and LED on the lid, exhaust slots over the heatsink |
+| ![front](docs/images/mockup-front.png) | ![schematic](docs/images/schematic.png) |
+| Fan side; pack hangs below like a drill battery | Schematic (`docs/schematic.svg`) |
 
 ```
 EGO pack ─┤ BODY: fuse → ZVS stage → burst switch → supervisor ├══ 25 cm lead ══╡ HEAD: coil + caps ╞

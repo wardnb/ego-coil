@@ -1,5 +1,7 @@
 # cad/
 
+`render_mockup.py` builds the whole assembly (body, dock, a simplified EGO pack, lead, head, coil, bolt) and renders the shaded mock-ups in `docs/images/mockup-*.png` with a small numpy rasteriser, so it needs no GPU or OpenGL.
+
 `build_cad.py` is a parametric CadQuery model. Edit the dictionaries at the
 top, run it, print the STLs from `cad/out/`.
 
